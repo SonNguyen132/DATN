@@ -1,0 +1,42 @@
+.top {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  @media (max-width: 340px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.btn_container {
+  width: 15%;
+
+  @media (max-width: 1024px) {
+    width: 30%;
+  }
+
+  @media (max-width: 340px) {
+    width: 45%;
+  }
+}
+
+.button {
+  width: 100%;
+  background: rgba(87, 153, 239, .12);
+  margin-bottom: 18px;
+  color: var(--color-blue);
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background: rgba(87, 153, 239, .2);
+  }
+}
+
+.title {
+  white-space: nowrap;
+}

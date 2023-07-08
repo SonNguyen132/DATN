@@ -1,0 +1,34 @@
+.search {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  top: 50%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    color: var(--color-dark-grey);
+  }
+}

@@ -1,0 +1,23 @@
+.button {
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: .02em;
+  transition: all .15s linear;
+  will-change: transform, opacity;
+  border-radius: var(--content-radius);
+  font-weight: var(--type-bodySemiBold-weight);
+
+  @media (max-width: 768px) {
+    font-size: var(--type-bodyTiny-size);
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}
+

@@ -1,0 +1,17 @@
+.search_list_container {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  border-radius: var(--content-radius);
+  text-align: start;
+  padding: 0;
+  background: #1f1f1f;
+  color: var(--color-white);
+  font-size: var(--type-bodyRegular-size);
+  font-weight: var(--type-bodyMedium-weight);
+
+  @media (max-width: 768px) {
+    left: 0;
+  }
+}
+
