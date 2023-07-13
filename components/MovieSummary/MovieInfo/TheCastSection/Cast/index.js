@@ -36,7 +36,8 @@ const Cast = ({
         ref={ref}
         className='cast'>
         <Glider
-          hasArrows
+          className="glider-container"
+          // hasArrows
           slidesToShow={slidesToShow}
           slidesToScroll={1}
           itemWidth={GLIDER_ITEM_WIDTH}>
@@ -70,6 +71,8 @@ const Cast = ({
         
         :global(.glider-contain) {
           width: 100%;
+          display: inline-flex;
+          height: 65px;
         }
         
         :global(.glider) {
@@ -84,6 +87,7 @@ const Cast = ({
           padding: 0;
           display: flex;
           z-index: 1;
+          {/* height: 50px; */}
         }
         
         :global(.glider.draggable) {
@@ -112,8 +116,8 @@ const Cast = ({
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
-          justify-content: center;
-          align-content: center;
+          {/* justify-content: center;
+          align-content: center; */}
           width: 100%;
           min-width: 150px;
         }
@@ -128,10 +132,10 @@ const Cast = ({
         }
         
         :global(.glider-next,.glider-prev) {
-          position: absolute;
-          background: 0 0;
+          {/* position: relative;
+          background: 0 0; */}
           z-index: 2;
-          font-size: 40px;
+          {/* font-size: 20px; */}
           text-decoration: none;
           left: -23px;
           top: 30%;
@@ -149,7 +153,12 @@ const Cast = ({
         :global(.glider-next) {
           right: -23px;
           left: auto;
+          {/* width: 0.5%; */}
         }
+
+        {/* :global(.glider-prev) {
+          width: 0.5%;
+        } */}
         
         :global(.glider-next.disabled,.glider-prev.disabled) {
           opacity: .25;
