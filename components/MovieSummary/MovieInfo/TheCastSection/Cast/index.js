@@ -38,8 +38,6 @@ const Cast = ({
         <Glider
           className="glider-container"
           // hasArrows
-          draggable
-          hasDots
           slidesToShow={slidesToShow}
           slidesToScroll={1}
           itemWidth={GLIDER_ITEM_WIDTH}>

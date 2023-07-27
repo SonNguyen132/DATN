@@ -81,7 +81,6 @@ const Home = () => {
       });
     } else {
       console.log('[Home useEffect - initial category name and initial page] no query parameter update');
-      Router.reload();
     }
   }, [dispatch, query]);
 
