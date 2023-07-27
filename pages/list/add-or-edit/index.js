@@ -96,6 +96,7 @@ const AddOrEdit = ({
       }
     } catch (error) {
       console.log('[AddOrEdit submitCallback] error => ', error);
+      alert("Name or description is Invalid");
       setSubmitStatus(STATUSES.REJECTED);
       // setAddError(error);
     }
