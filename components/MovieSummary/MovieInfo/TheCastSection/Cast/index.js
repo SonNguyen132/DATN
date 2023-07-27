@@ -38,6 +38,8 @@ const Cast = ({
         <Glider
           className="glider-container"
           // hasArrows
+          draggable
+          hasDots
           slidesToShow={slidesToShow}
           slidesToScroll={1}
           itemWidth={GLIDER_ITEM_WIDTH}>
@@ -93,6 +95,7 @@ const Cast = ({
         :global(.glider.draggable) {
           cursor: -webkit-grab;
           cursor: grab;
+          {/* height:10px; */}
         }
         
         :global(.glider.draggable,.glider.draggable .glider-slide img) {

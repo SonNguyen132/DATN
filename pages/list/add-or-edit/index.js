@@ -54,6 +54,7 @@ const AddOrEdit = ({
 
   const submitCallback = async () => {
     try {
+      console.log("submid")
       setSubmitStatus(STATUSES.PENDING);
       const body = {
         name: inputs[INPUT_NAMES.LIST_NAME],
@@ -73,16 +74,25 @@ const AddOrEdit = ({
         ? await tmdbAPI.put(`/${TMDB_API_NEW_VERSION}/list/${listId}`, body, config)
         : await tmdbAPI.post(`/${TMDB_API_NEW_VERSION}/list`, body, config);
 
+      console.log(response)
       setSubmitStatus(STATUSES.RESOLVED);
 
       // MEMO: Add case
       if (!listId) {
         const { id } = response.data;
-        Router.push({
+        await Router.push({
           query: {
             [QUERY_PARAMS.ID]: id
           }
         });
+        Router.reload()
+      } else {
+        await Router.push({
+          query: {
+            [QUERY_PARAMS.ID]: listId
+          }
+        });
+        Router.reload()
       }
     } catch (error) {
       console.log('[AddOrEdit submitCallback] error => ', error);

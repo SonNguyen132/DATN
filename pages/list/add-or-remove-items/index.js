@@ -118,7 +118,7 @@ const AddOrRemoveItems = ({
       await tmdbAPI.post(`/${TMDB_API_NEW_VERSION}/list/${listId}/items`, body, config);
       const expectedPage = Math.ceil((movies.total_results + 1) / TMDB_PAGE_LIMIT);
       if (expectedPage === page) {
-        await loadMovies(page, listId, accessToken);
+        await loadMovies(page, listId, accessToken, accountId)
       } else {
         Router.push({
           query: {
